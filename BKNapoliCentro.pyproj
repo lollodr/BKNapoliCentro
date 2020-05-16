@@ -56,8 +56,34 @@
     <Folder Include="BKNC\templates\" />
     <Folder Include="BKNC\templates\BKNC\" />
     <Folder Include="BKNapoliCentro\" />
+    <Folder Include="BKNC\static\BKNC\images\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BKNC\static\BKNC\content\bootstrap-grid.css" />
+    <Content Include="BKNC\static\BKNC\content\bootstrap-grid.min.css" />
+    <Content Include="BKNC\static\BKNC\content\bootstrap-reboot.css" />
+    <Content Include="BKNC\static\BKNC\content\bootstrap-reboot.min.css" />
+    <Content Include="BKNC\static\BKNC\content\bootstrap.min.css.map" />
+    <Content Include="BKNC\static\BKNC\content\carousel.css" />
+    <Content Include="BKNC\static\BKNC\content\custom-style.css" />
+    <Content Include="BKNC\static\BKNC\fonts\Insanibc.ttf" />
+    <Content Include="BKNC\static\BKNC\fonts\Insanibu.ttf" />
+    <Content Include="BKNC\static\BKNC\images\BKLogoBaseTransparent.png" />
+    <Content Include="BKNC\static\BKNC\images\BKLogoBaseWhite.png" />
+    <Content Include="BKNC\static\BKNC\images\DeliveryGreen.png" />
+    <Content Include="BKNC\static\BKNC\images\emailLogo.jpg" />
+    <Content Include="BKNC\static\BKNC\images\facebookButton.jpg" />
+    <Content Include="BKNC\static\BKNC\Images\instagramButton.jpg" />
+    <Content Include="BKNC\static\BKNC\images\LogoPersonalized_2.png" />
+    <Content Include="BKNC\static\BKNC\images\mapLogo.jpg" />
+    <Content Include="BKNC\static\BKNC\images\phoneLogo.png" />
+    <Content Include="BKNC\static\BKNC\scripts\bootstrap.bundle.js" />
+    <Content Include="BKNC\static\BKNC\scripts\bootstrap.bundle.min.js" />
+    <Content Include="BKNC\static\BKNC\scripts\bootstrap.min.js.map" />
+    <Content Include="BKNC\static\BKNC\scripts\popper.min.js" />
+    <Content Include="BKNC\static\BKNC\scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="BKNC\templates\BKNC\font.css" />
+    <Content Include="BKNC\templates\BKNC\layout.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="BKNC\static\BKNC\content\bootstrap.css" />
@@ -71,8 +97,7 @@
     <Content Include="BKNC\static\BKNC\scripts\bootstrap.min.js" />
     <Content Include="BKNC\static\BKNC\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="BKNC\static\BKNC\scripts\jquery-1.10.2.js" />
-    <Content Include="BKNC\static\BKNC\scripts\jquery-1.10.2.min.js" />
-    <Content Include="BKNC\static\BKNC\scripts\jquery-1.10.2.min.map" />
+    <Content Include="BKNC\static\BKNC\scripts\jquery.min.js" />
     <Content Include="BKNC\static\BKNC\scripts\jquery.validate-vsdoc.js" />
     <Content Include="BKNC\static\BKNC\scripts\jquery.validate.js" />
     <Content Include="BKNC\static\BKNC\scripts\jquery.validate.min.js" />
@@ -85,7 +110,7 @@
     <Content Include="BKNC\templates\BKNC\about.html" />
     <Content Include="BKNC\templates\BKNC\contact.html" />
     <Content Include="BKNC\templates\BKNC\index.html" />
-    <Content Include="BKNC\templates\BKNC\layout.html" />
+    <Content Include="BKNC\templates\BKNC\layout_old.html" />
     <Content Include="BKNC\templates\BKNC\login.html" />
     <Content Include="BKNC\templates\BKNC\loginpartial.html" />
   </ItemGroup>

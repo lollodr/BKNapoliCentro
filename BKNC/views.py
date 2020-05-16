@@ -13,7 +13,7 @@ def home(request):
         request,
         'BKNC/index.html',
         {
-            'title':'Home Page',
+            'title':'Home',
             'year':datetime.now().year,
         }
     )

@@ -1,0 +1,43 @@
+/* Button for contacts layout */
+.btn-total-white {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.btn-total-white:hover {
+    border-color: black;
+}
+
+.btn-total-white:focus, .btn-total-white.focus {
+    color: black;
+    background-color: white;
+    border-color: white;
+    box-shadow: 0 0 0 0.2rem white;
+}
+
+.btn-total-white.disabled, .btn-total-white:disabled {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.btn-total-white:not(:disabled):not(.disabled):active, .btn-total-white:not(:disabled):not(.disabled).active,
+.show > .btn-total-white.dropdown-toggle {
+    color: black;
+    background-color: white;
+    border-color: gray;
+}
+
+.btn-total-white:not(:disabled):not(.disabled):active:focus, .btn-total-white:not(:disabled):not(.disabled).active:focus,
+.show > .btn-total-white.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem white;
+}
+
+
+
+/* Class for image used as a logo */
+img.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
