@@ -2,20 +2,25 @@
 <html>
 
 <head>
-    
+
     <!-- Loading the static folder -->
     {% load staticfiles %}
 
     <!-- Title and icon of the tab of the browser-->
-    <title>{{ title }} -  BK Napoli Centro</title>    
+    <title>{{ title }} -  BK Napoli Centro</title>
     <link rel="icon" href="{% static 'BKNC/images/BKLogoBaseTransparent.png' %}" type="image/png" />
 
     <!-- Needed .css -->
     <link rel="stylesheet" type="text/css" href="{% static 'BKNC/content/bootstrap.min.css' %}" />  <!-- Compiled css -->
     <link rel="stylesheet" type="text/css" href="{% static 'BKNC/content/custom-style.css' %}" />   <!-- Custom stylesheet -->
-
+    
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <!-- Needed .js -->
+    <script src="{% static 'BKNC/scripts/jquery.min.js' %}"></script>
+    <script src="{% static 'BKNC/scripts/bootstrap.min.js' %}"></script>
+
 
     <!-- Custom style -->
     <style>
@@ -49,22 +54,29 @@
             color: black;
         }
 
+        .nav-item .nav-custom {
+            font-size: xx-large;
+        }
+
+        .nav-custom.active {
+            color: black
+        }
 
     </style>
 
 </head>
 
 <body>
-    
+
     <!-- Header of the page -->
     <header class="bg-white">
-        
+
         <!-- With "container-fluid" class the bar take the entire width of the page -->
         <div class="container-fluid">
-            
+
             <!-- With "row" class you hold columns in it: each row, 12 columns -->
             <div class="row">
-                
+
                 <!-- Class "col-sm-2" take 25% of the orizzontal space and applies to S, M, L and XL devices but not XS -->
                 <!-- Class "m-auto" means auto margin -->
                 <!-- Class "d-none" together with "d-lg-block" means that is visible for L and XL devices -->
@@ -77,7 +89,7 @@
 
                 <!-- Class "col" automatically divides the orizzontal space with same dimension, for each device dimension -->
                 <div class="col m-auto">
-                    
+
                     <!-- The Contact Navbar on the top of the page will disappear if device size is less than L, as the logo -->
                     <div id="contactNavbar" class="d-none d-lg-block">
                         <!-- In order to equally divide this part between the contact, use again the "row" class -->
@@ -132,39 +144,43 @@
                         <!-- Here we need a navigation bar, in particular to work with the mobile devices -->
                         <!-- "navbar-expand-md" stacks the navbar vertically on medium screens -->
                         <!-- "navbar-ligh" and "bg-white" creates the aestetich of the navigation bar -->
-                        <nav id="menuNavbar" class="navbar navbar-expand-md navbar-light bg-white text-center m-auto ">
+                        <nav class="navbar navbar-expand-md navbar-light bg-white text-center m-auto ">
                             <div class="collapse navbar-collapse">
 
                                 <!-- "ul" creates a list group -->
                                 <!-- The "navbar-nav" class let to add links inside the navbar -->
                                 <ul class="navbar-nav m-auto">
 
-                                    <li class="nav-item active">
-                                        <a class="nav-custom" href="/">
-                                            <h3> Home </h3>
+                                    <li id="homeButton" class="nav-item">
+                                        <a class="nav-custom active" href="/">
+                                            Home
                                         </a>
                                     </li>
 
                                     <li class="nav-item dropdown">
-                                        <a class="nav-custom dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <h3> Menu </h3>
+                                        <!-- 
+                                            The class "dropdown-toggle" and the data attribute with the same name automatically
+                                            hooks up the elementy to the type the widget is, so dropdown
+                                        -->
+                                        <!-- Without the "href" the Menu would be apparently not cliccable -->
+                                        <a class="nav-custom dropdown-toggle" href="#" id="dropdownMenu" data-toggle="dropdown">
+                                            Menu
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                            <li class="dropdown-item" href="#"> Menu completo </li>
+                                            <li class="dropdown-item" href="#"> Offerte </li>
+                                        </ul>
                                     </li>
 
                                     <li class="nav-item">
                                         <a class="nav-custom" href="/">
-                                            <h3> Azienda </h3>
+                                            Azienda
                                         </a>
                                     </li>
 
                                     <li class="nav-item">
                                         <a class="nav-custom" href="/">
-                                            <h3> Area personale </h3>
+                                            Area personale
                                         </a>
                                     </li>
 
@@ -176,19 +192,42 @@
 
                 </div>
 
-                <div class="col-sm-2 m-auto d-none d-lg-block">
-                    <a href="https://www.facebook.com/pg/BurgerKingNapoliCentro/" target="_blank">
-                        <img class="logo" src="../../static/BKNC/Images/facebookButton.jpg" alt="Facebook" height="50" width="50" />
-                    </a>
-                    <a href="https://www.instagram.com/burgerkingnapoli/" target="_blank">
-                        <img class="logo" src="../../static/BKNC/Images/instagramButton.jpg" alt="Instagram" height="37" width="37" />
-                    </a>
+                <div class="col-sm-2 m-auto">
+                    
+                    <div id="socialLogos" class="row text-center m-auto d-none d-lg-block">
+                        <a href="https://www.facebook.com/pg/BurgerKingNapoliCentro/" target="_blank">
+                            <img class="logo" src="../../static/BKNC/Images/facebookButton.jpg" alt="Facebook" height="50" width="50" />
+                        </a>
+                        <a href="https://www.instagram.com/burgerkingnapoli/" target="_blank">
+                            <img class="logo" src="../../static/BKNC/Images/instagramButton.jpg" alt="Instagram" height="37" width="37" />
+                        </a>
+                    </div>
+
+                    <div id="languages" class="row text-center m-auto">
+
+                        <nav class="navbar navbar-expand-md navbar-light bg-white text-center m-auto">
+                           <ul class="navbar-nav m-auto">
+                               <li class="nav-item">
+                                   <a href="#" class="nav-custom active">
+                                       IT
+                                   </a>
+                               </li> 
+                               <li class="nav-item">
+                                   <a class="nav-custom" href="#">
+                                       EN
+                                   </a>
+                               </li>
+                           </ul>
+                        </nav>
+
+                    </div>
+
                 </div>
-            
+
             </div>
-        
-        </div>        
-    
+
+        </div>
+
     </header>
 
 </body>
