@@ -21,49 +21,6 @@
     <script src="{% static 'BKNC/scripts/jquery.min.js' %}"></script>
     <script src="{% static 'BKNC/scripts/bootstrap.min.js' %}"></script>
 
-
-    <!-- Custom style -->
-    <style>
-
-        /* Details for the body, in particoular font */
-        body {
-            font-family: 'Righteous', cursive;
-            font-size: 20px;
-            line-height: 1.42857143;
-            padding-top: 0;
-        }
-
-        /* Slightly different aesthetics for the contact part, so text into the header with h6 dimension and span class */
-        header h6 span {
-            overflow: hidden;
-            display: block;
-            float: left;
-            font-size: 12px;
-            line-height: 18px;
-        }
-
-        /* Navbar menu */
-        .nav-custom {
-            color: slategrey;
-            display: block;
-            padding: 0.5rem 1rem;
-        }
-
-        .nav-custom:hover, .nav-custom:focus {
-            text-decoration: none;
-            color: black;
-        }
-
-        .nav-item .nav-custom {
-            font-size: xx-large;
-        }
-
-        .nav-custom.active {
-            color: black
-        }
-
-    </style>
-
 </head>
 
 <body>
@@ -195,12 +152,23 @@
                 <div class="col-sm-2 m-auto">
                     
                     <div id="socialLogos" class="row text-center m-auto d-none d-lg-block">
-                        <a href="https://www.facebook.com/pg/BurgerKingNapoliCentro/" target="_blank">
-                            <img class="logo" src="../../static/BKNC/Images/facebookButton.jpg" alt="Facebook" height="50" width="50" />
-                        </a>
-                        <a href="https://www.instagram.com/burgerkingnapoli/" target="_blank">
-                            <img class="logo" src="../../static/BKNC/Images/instagramButton.jpg" alt="Instagram" height="37" width="37" />
-                        </a>
+
+                        <nav class="navbar navbar-expand-md navbar-light bg-white text-center m-auto">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item">
+                                    <a class="nav-custom" href="https://www.facebook.com/pg/BurgerKingNapoliCentro/" target="_blank">
+                                        <img class="logo" src="../../static/BKNC/Images/facebookButton.png" alt="Facebook" height="50" width="50" />
+                                    </a>
+                                </li> 
+
+                                <li class="nav-item">
+                                    <a class="nav-custom" href="https://www.instagram.com/burgerkingnapoli/" target="_blank">
+                                        <img class="logo" src="../../static/BKNC/Images/instagramButton.jpg" alt="Instagram" height="37" width="37" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
                     </div>
 
                     <div id="languages" class="row text-center m-auto">
@@ -229,6 +197,22 @@
         </div>
 
     </header>
+
+    <!-- Content of the page -->
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="container-fluid">
+
+        <!-- "hr" stays for Horizzontal Rule, so it is an horizzontal divider -->
+        <hr />
+
+        <!-- Footer informations -->
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013-2020 Burger King Napoli Centro &middot; <a href="#"> Privacy </a> &middot; <a href="#"> Terms </a> </p>
+
+    </footer>
 
 </body>
 

@@ -1,3 +1,20 @@
+/* Details for the body, in particoular font */
+body {
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    line-height: 1.42857143;
+    padding-top: 0;
+}
+
+/* Slightly different aesthetics for the contact part, so text into the header with h6 dimension and span class */
+header h6 span {
+    overflow: hidden;
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 18px;
+}
+
 /* Button for contacts layout */
 .btn-total-white {
     color: black;
@@ -40,4 +57,24 @@
 img.logo {
     max-width: 100%;
     max-height: 100%;
+}
+
+/* Navbar menu */
+.nav-custom {
+    color: slategrey;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-custom:hover, .nav-custom:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item .nav-custom {
+    font-size: xx-large;
+}
+
+.nav-custom.active {
+    color: black
 }
